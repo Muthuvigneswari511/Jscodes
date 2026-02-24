@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="showAdd()">Add</button>
+    <button onclick="showSub()">Sub</button>
+    <button onclick="showMul()">Mul</button>
+    <button onclick="showDiv()">Div</button>
+    <script>
+        function add(a,b){
+            return a+b;
+        }
+        function showAdd(){
+            let adds=add(4,3);
+            console.log(adds);
+        }
+        function sub(a,b){
+            return a-b;
+        }
+        function showSub(){
+            let subs=sub(10,2);
+            console.log(subs);
+        }
+        function mul(a,b){
+            return a*b;
+        }
+        function showMul(){
+            let muls=mul(4,3);
+            console.log(muls);  
+        }
+        function div(a,b){
+            return a/b;
+        }
+        function showDiv(){
+            let divs=div(10,2);
+            console.log(divs);
+        }
+    </script>
+    
+</body>
+</html>
