@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person={
+            name:"muthu",
+            age:22,
+            city:"madurai",
+            greet : function(){
+                console.log(this.name+" greeting");
+            },
+            marks:{
+                maths:20,
+                science:100
+            }
+        };
+        //array of objects
+        const person2={...person};
+        console.log(person2);
+        person2.age=24;
+        console.log(person);
+        let arr=[
+            {name:"muthu"},
+            {name:"saran"}
+        ]
+        let arr2=structuredClone(arr);
+        console.log(arr);
+        console.log(arr2);
+        arr[1].name="dhanush";
+        console.log(arr);
+        console.log(arr2);
+
+        //object destructing
+        const {name,age,city,greet,marks}=person;
+        greet();
+        
+
+    </script>
+</body>
+</html>
