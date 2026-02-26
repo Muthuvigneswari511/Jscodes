@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local storage counter</title>
+</head>
+<body>
+    <p id="plus">0</p>
+    <button type="submit" onclick="increase()">Increase</button>
+    <script>
+        function increase(){
+            let val=document.getElementById("plus");
+            let curval=Number(val.innerHTML);
+            curval++;
+            val.innerHTML=curval;
+            localStorage.setItem("counter",curval);
+        }
+    </script>
+</body>
+</html>

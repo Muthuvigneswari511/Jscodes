@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local storage Input box save</title>
+</head>
+
+<body>
+    <input type="text" id="inputs">
+    <button type="submit" onclick="save()">save</button>
+    <script>
+        function save() {
+            let val = document.getElementById("inputs").value;
+            localStorage.setItem("userinput",val);
+            alert("data saved");
+            let data=localStorage.getItem("userinput");
+            document.writeln(data);
+        }
+    </script>
+</body>
+
+</html>

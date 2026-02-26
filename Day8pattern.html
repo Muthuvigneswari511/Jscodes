@@ -4,11 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pattern</title>
+    <style>
+       
+    </style>
 </head>
 <body>
-   <form>
-        <input type="text" id="email">
-        <span id="mailmsg"></span>
+   <form id="myform" onsubmit="preven(event)">
+        <input type="text" id="email"><br>
+        <span id="mailmsg"></span><br>
+        <button type="submit" onclick="checkemail()">Email</button>
+
+        <input type="text" id="credit"><br>
+        <span id="creditmsg"></span><br>
+        <button type="submit" onclick="checkpassword()">credit</button>
    </form> 
+   <script>
+    let form=document.getElementById("myform");
+    function preven(event){
+        event.preventDefault();
+    }
+    const emailregex=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    function validate(inputId,regex,message){
+        const value=document.getElementById(inputId).value;
+        const msg=document.getElementById(message);
+        if(regex.test(value)){
+            msg.innerHTML="Valid Email";
+            msg.style.color="green";
+            msg.style.fontSize="12px";
+        }
+        else{
+            msg.innerHTML="Invalid email";
+            msg.style.color="red";
+            msg.style.fontSize="12px";
+        }
+    }
+    function checkemail(){
+        validate("email",emailregex,"mailmsg");
+    }
+
+   </script>
 </body>
 </html>

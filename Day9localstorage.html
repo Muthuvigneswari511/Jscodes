@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+    <style>
+        .dark-mode{
+            background-color: rgb(159, 143, 143);
+        }
+    </style>
+</head>
+<body class="dark-mode">
+    <script>
+        localStorage.setItem("name","mu");
+        localStorage.removeItem("name");
+        localStorage.clear();
+
+        //theme
+        localStorage.setItem("theme","dark");
+        let theme=localStorage.getItem("theme");
+        if(theme=="dark"){
+            document.body.classList.add("dark-mode");
+        }
+    </script>
+</body>
+</html>
