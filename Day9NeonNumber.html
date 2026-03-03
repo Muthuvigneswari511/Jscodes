@@ -1,0 +1,26 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let num=3;
+            let square=num*num;
+            let sum=0;
+            while(square>0){
+                let digit=square%10;
+                sum+=digit;
+                square=Math.floor(square/10);
+            }
+            if(sum==num){
+                console.log("Neon number");
+            }
+            else{
+                console.log("Not a neon number");
+            }
+        </script>
+    </body>
+    </html>
